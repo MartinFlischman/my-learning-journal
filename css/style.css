@@ -1,0 +1,62 @@
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+  color: #292929;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Global styles */
+a {
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("/images/1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(var(--n, 1), 1fr);
+  gap: 0.625em;
+}
+
+@media (min-width: 767px) {
+  .blog-container {
+    --n: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .blog-container {
+    --n: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog-container {
+    --n: 4;
+  }
+}
